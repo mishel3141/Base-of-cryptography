@@ -33,7 +33,7 @@ def find_flag():
                 print("Знайдений байт:", bytes([byte]))
                 break
 
-        if b"crypto{" in flag and flag.endswith(b"}"):    # рішення знайдено
+        if b"crypto{" in flag and flag.endswith(b"}"):  # Завершує пошук, коли формат FLAG знайдено
             break
 
     return flag
