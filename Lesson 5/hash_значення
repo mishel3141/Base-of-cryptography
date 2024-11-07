@@ -1,3 +1,22 @@
+Password: "qwertyuiop"
+Hashed password: $argon2id$v=19$m=65536,t=3,p=4$t6IuYII3MNlcBx+hedxUag$IvFKb3sOFWw9fldIR9zSIH3LLSNySSK61v5sjgUo5LI
 
+Password: "sofPed-westag-jejzo1"
+Hashed password: $argon2id$v=19$m=65536,t=3,p=4$Lr1fCkG+RajoDNTg68Zv3Q$mmmmPn6ULyjbOemR8t33ZWKPUCtXiJX+ccIuf5fShGo
 
+Password: "f3Fg#Puu$EA1mfMx2"
+Hashed password: $argon2id$v=19$m=65536,t=3,p=4$7wQf/bcI/Km4n8DtulfqRw$B7DmyzyRQqY8pS8YGqpbtveBI/OwcR6M6ZnIolhlDmc
 
+Password: "TIMCfJDkKBRm9/zwcFbHhE6zaMcSxR7nke1mJKcVqXpvCzg69d7Mf2quanMoAfmPJXyqT4gyGpLoL1lTHoqmwVmaUwrpOPRecB8GAU17eUJJHiksv3qrqcVxhgpMkX/UlKaLdFSwFIr7cVoJmBqQ/buWzxJNCIo7qbtIi3fSi62NwMHh"
+Hashed password: $argon2id$v=19$m=65536,t=3,p=4$ljRHKr7jRqDWg7sX8+MKmw$TEN4MwvvFF9coeIb+C4yfYA1REof2oyqu/QrxT+w50w
+
+  Формат Hashed password:
+- $argon2id$ — вказує на використаний варіант алгоритму Argon2 (в даному випадку argon2id, який є гібридним варіантом 
+  між argon2d і argon2i).
+- v=19 — версія алгоритму Argon2.
+- m=65536 — кількість блоків пам'яті, яку використовує алгоритм.
+- t=3 — кількість раундів (це визначає час виконання алгоритму).
+- p=4 — кількість паралельних потоків, що використовуються при хешуванні.
+- Після цього йде сіль (salt), яка є випадковим значенням, що додається до пароля перед хешуванням для забезпечення 
+  більшої безпеки.
+- І остання частина — це фактичний хеш пароля.
