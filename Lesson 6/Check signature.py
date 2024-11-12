@@ -1,3 +1,5 @@
+# Код Завдання 1 щодо перевірки автентичності підпису
+
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.serialization import load_pem_public_key
