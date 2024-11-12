@@ -1,3 +1,5 @@
+# Код завдання 3 щодо дешифрування повідомлення без використання секретного ключа
+
 from Crypto.Util.number import long_to_bytes
 
 # Параметри з output.txt
