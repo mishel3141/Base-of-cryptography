@@ -1,4 +1,5 @@
 #        Код Завдання 2 щодо зашифрування повідомлення лектору
+#     У коді використовується алгоритм RSA з режимом шифрування OAEP  
 
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives import hashes
