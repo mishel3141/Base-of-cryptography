@@ -1,1 +1,13 @@
+Згенеровані значення для надсилання Alice:
+1.	Відкритий довгостроковий ключ підпису Боба у форматі PEM:
 
+      -----BEGIN PUBLIC KEY-----
+      MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEJWI8FCWeEJosM6T6I7Q/wbWdxgcZYFZN
+      rWRl/UBkNrN/0Df2nK6wRhuS9rWbGfyvx+7yFIaOSLoC47pX+jB2xQ==
+      -----END PUBLIC KEY-----
+
+2.	Відкритий ключ ECDH (значення Y = yP з боку Боба) у форматі hex:
+      bob_x_pub_key = b'24936a86630cb76b1f4f3d2fad60d31663b3ece71c89c7f95237b9fabe8e3c60'
+
+3.  Підпис відкритого ключа ECDH Боба у форматі hex.
+      Bob's_signature = b'30450221009c6baf153ebbb6b25a02f7d19b9d6dfb116f1480878e024b323667b11b9d05ba02203893a8d204467bbdd8af71aab1804e8f6f663c18c8b75a480d94fb3d4059ae35'
