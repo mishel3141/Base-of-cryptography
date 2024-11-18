@@ -1,10 +1,11 @@
-#   Реалізація автентифікованого протоколу Діффі-Хеллмана з використанням схеми RSA-PSS для підпису.
+#   Реалізація автентифікованого протоколу Діффі-Хеллмана з використанням схеми RSA-PSS для підпису
 
 #  Основні кроки коду:
 #     1. Генерація загальних параметрів DH
-#     2. Генерація приватних і публічних ключів Аліси та Боба як для DH, так і для RSA.
-#     3. Веріфікація підписів: кожна сторона перевіряє, що отриманий публічний ключ було підписано іншою стороною.
-#     4. Порівняння Derived Key: обидві сторони порівнюють Derived Key, щоб переконатися, що вони співпадають.
+#     2. Генерація приватних і публічних ключів Аліси та Боба як для DH, так і для RSA
+#     3. Обмін публічними ключами
+#     4. Веріфікація підписів: кожна сторона перевіряє, що отриманий публічний ключ було підписано іншою стороною
+#     5. Порівняння Derived Key: обидві сторони порівнюють Derived Key, щоб переконатися, що вони співпадають
 
 
 from binascii import hexlify
@@ -12,14 +13,14 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import dh, rsa, padding
 from cryptography.hazmat.primitives.serialization import (
     Encoding,
+    PrivateFormat,
+    NoEncryption,
     PublicFormat,
-    load_pem_public_key,
-    load_pem_private_key,
 )
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 
 #     Крок 1:  Генерація загальних параметрів DH
-print("STEP 1:  Common DH parameters")
+print("STEP 1:  Common DH parameters\n")
 
 parameters = dh.generate_parameters(generator=2, key_size=2048)
 print("Module = ", parameters.parameter_numbers().p)
@@ -92,12 +93,21 @@ bob_signature = bob_rsa_private_key.sign(
 )
 print("\nBob's Public Key Signature:\n", hexlify(bob_signature))
 
-#     Крок 3:   Веріфікація підписів на кожній стороні
-print("\n\nSTEP 3:  Signature verification")
 
-# ----------- Аліса отримує публічний ключ Боба ----------
+#   Крок 3:  Обмін публічними ключами
+print("\n\nSTEP 3:  Public key exchange")
+
+# Bob --> Alice:    bob_public_key, bob_signature
 print("\n--- Аліса отримує публічний ключ Боба ---")
 bob_public_key_bytes = bob_public_key.public_bytes(Encoding.DER, PublicFormat.SubjectPublicKeyInfo)
+
+# Alice --> Bob:    alice_public_key, alice_signature
+print("--- Боб отримує публічний ключ Аліси ---")
+alice_public_key_bytes = alice_public_key.public_bytes(Encoding.DER, PublicFormat.SubjectPublicKeyInfo)
+
+
+#     Крок 4:   Веріфікація підписів на кожній стороні
+print("\n\nSTEP 4:  Signature verification")
 
 # Верифікація підпису Боба
 try:
@@ -110,13 +120,9 @@ try:
         ),
         hashes.SHA256()
     )
-    print("Bob's signature verified!")
+    print("\nBob's signature verified!")
 except Exception as e:
-    print(f"Bob's signature failed verification: {e}")
-
-# ------------ Bob отримує публічний ключ Alice ----------------
-print("\n--- Боб отримує публічний ключ Аліси ---")
-alice_public_key_bytes = alice_public_key.public_bytes(Encoding.DER, PublicFormat.SubjectPublicKeyInfo)
+    print(f"\nBob's signature failed verification: {e}")
 
 # Верифікація підпису Аліси
 try:
@@ -133,8 +139,8 @@ try:
 except Exception as e:
     print(f"Alice's signature failed verification: {e}")
 
-#     Крок 4. Порівняння Derived Key на кожній стороні, щоб переконатися, що вони співпадають
-print("\n\nSTEP 4: Derived Key Comparison")
+#     Крок 5. Порівняння Derived Key на кожній стороні, щоб переконатися, що вони співпадають
+print("\n\nSTEP 5: Derived Key Comparison")
 
 # Обчислення спільного секрету та виведення Derived Key
 alice_shared_value = alice_private_key.exchange(bob_public_key)
