@@ -1,0 +1,2 @@
+Cклав та запустив у терміналі команду на верифікацію:
+ssh-keygen -Y verify -f "c:/Users/user/.ssh_test/allowed_signers.txt" -I "ruslan.kiyanchuk@gmail.com" -n "robot_dreams" -s "c:/Users/user/.ssh_test/data.bmp.sig" < "c:/Users/user/.ssh_test/data.bmp" > “c:/Users/user/.ssh_test/verification_result.txt”
