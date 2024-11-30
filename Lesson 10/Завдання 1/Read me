@@ -7,4 +7,4 @@
 
 3. Верифікація файлів 
     ssh-keygen -Y verify -f "c:/Users/user/.ssh_test/keys.txt" -I "mishel3141@gmail.com" -n "telegram" -s "c:/Users/user/.ssh_test/image.png.sig" < "c:/Users/user/.ssh_test/image.png" > "c:/Users/user/.ssh_test/verification_image.txt"
-    отримав:  
+    отримав:  Good "telegram" signature for mishel3141@gmail.com with ED25519 key SHA256
