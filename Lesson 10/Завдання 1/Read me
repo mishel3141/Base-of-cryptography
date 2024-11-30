@@ -6,5 +6,5 @@
     ssh-keygen -Y sign -f "c:/Users/user/.ssh_test/id_ed25519_test" -n "telegram" "c:/Users/user/.ssh_test/image.png"
 
 3. Верифікація файлів 
-  ssh-keygen -Y verify -f "c:/Users/user/.ssh_test/keys.txt" -I "mishel3141@gmail.com" -n "telegram" -s "c:/Users/user/.ssh_test/image.png.sig" < "c:/Users/user/.ssh_test/image.png" > "c:/Users/user/.ssh_test/verification_image.txt"
-
+    ssh-keygen -Y verify -f "c:/Users/user/.ssh_test/keys.txt" -I "mishel3141@gmail.com" -n "telegram" -s "c:/Users/user/.ssh_test/image.png.sig" < "c:/Users/user/.ssh_test/image.png" > "c:/Users/user/.ssh_test/verification_image.txt"
+    отримав:  
