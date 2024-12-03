@@ -1,8 +1,19 @@
 
 e2ee_project/
+│
+├── utils/
+│   ├── __init__.py
+│   ├── utils.py             # Різні утиліти
+│
+├── keys/
+│   ├── client1_private.pem  # Приватний ключ Клієнта 1
+│   ├── client2_public.pem   # Публічний ключ Клієнта 2
+│   ├── ...                  # Інші ключі, якщо потрібно
+│
 ├── ratchet/
 │   ├── __init__.py
 │   ├── double_ratchet.py    # алгоритм Double Ratchet
+│   ├──key_management.py   # Генерація та зберігання ключів│
 │
 ├── interface/
 │   ├── __init__.py
@@ -13,15 +24,6 @@ e2ee_project/
 │   ├── __init__.py
 │   ├── test1.py             # Тестування алгоритму
 │   ├── test2.py             # Поточний скрипт тестування
-│
-├── utils/
-│   ├── __init__.py
-│   ├── utils.py             # Різні утиліти
-│
-├── keys/
-│   ├── client1_private.pem  # Приватний ключ Клієнта 1
-│   ├── client2_public.pem   # Публічний ключ Клієнта 2
-│   ├── ...                  # Інші ключі, якщо потрібно
 │
 ├── requirements.txt         # Список залежностей
 └── README.md                # Інструкції
