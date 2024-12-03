@@ -12,6 +12,32 @@ e2ee_project/
 │   ├── stream_encryptor.py # Обробка потоків
 │   └── key_management.py   # Генерація та зберігання ключів
 │
+├── interface/
+│   ├── __init__.py
+│   ├── client1.py         # Код для Клієнта 1
+│   ├── client2.py         # Код для Клієнта 2
+│
+├── test/
+│   ├── test1.py           # Тестування алгоритму
+│   ├── test2.py           # Поточний скрипт тестування
+│
 ├── server.py         # Серверна сторона (Alice)
 ├── client.py         # Клієнтська сторона (Bob)
 └── utils.py          # Загальні функції (HMAC, логування тощо)
+
+
+e2ee_project/
+├── ratchet/
+│   ├── __init__.py
+│   ├── double_ratchet.py  # Ваш алгоритм Double Ratchet
+├── interface/
+│   ├── __init__.py
+│   ├── client1.py         # Код для Клієнта 1
+│   ├── client2.py         # Код для Клієнта 2
+├── test/
+│   ├── test1.py           # Тестування алгоритму
+│   ├── test2.py           # Поточний скрипт тестування
+├── requirements.txt       # Список залежностей (якщо потрібні додаткові бібліотеки)
+└── README.md              # Інструкції
+
+
