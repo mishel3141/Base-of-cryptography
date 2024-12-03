@@ -1,1 +1,17 @@
-c
+
+Структура файлів проекту:
+e2ee_project/
+│
+├── keys/             
+│   ├── alice_key.pem    # Приватний ключ Alice
+│   └── bob_key.pem      # Приватний ключ Bob
+│
+├── ratchet/          
+│   ├── __init__.py      # Ініціалізація пакета
+│   ├── double_ratchet.py # Реалізація Double Ratchet
+│   ├── stream_encryptor.py # Обробка потоків
+│   └── key_management.py   # Генерація та зберігання ключів
+│
+├── server.py         # Серверна сторона (Alice)
+├── client.py         # Клієнтська сторона (Bob)
+└── utils.py          # Загальні функції (HMAC, логування тощо)
