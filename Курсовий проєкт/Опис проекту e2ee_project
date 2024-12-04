@@ -1,29 +1,43 @@
-
 e2ee_project/
 │
-├── utils/
-│   ├── __init__.py
-│   ├── utils.py             # Різні утиліти
+├── server.py
 │
-├── keys/
-│   ├── client1_private.pem  # Приватний ключ Клієнта 1
-│   ├── client2_public.pem   # Публічний ключ Клієнта 2
-│   ├── ...                  # Інші ключі, якщо потрібно
+├── client.py
+│
+├── utils/                   # Різні утиліти
+│   ├── __init__.py
+│   ├── utils.py             
+│
+├── certs/
+│   ├── server/              # Сертифікати і ключі сервера
+│   │   ├── server.crt
+│   │   ├── server.key
+│   │   ├── server.csr
+│   │   └── ca.srl
+│   │
+│   ├── client_certs/
+│   │   ├── Bob/             # Сертифікати і ключі Клієнта 1
+│   │   │   ├── Bob.key       
+│   │   │   └── Bob.crt
+│   │   ├── Mishel/          # Сертифікати і ключі Клієнта 2
+│   │   │   ├── Mishel.key    
+│   │   │   └── Mishel.crt
+│   │   ├── Eve/             # Сертифікати і ключі Клієнта 3
+│   │   │   ├── Eve.key      
+│   │   │   └── Eve.crt
+│   │   ├── Alice/           # Сертифікати і ключі Клієнта 4
+│   │   │   ├── Alice.key     
+│   │   │   └── Alice.crt
+│   │   └── .....            # Інші ключі та сертифікати, якщо потрібно
+│   │
+│   └── ca/
+│       ├── ca.crt           # Сертифікати і ключі Сертифікаційного Центру (Certificate Authority)
+│       └── ca.key│
 │
 ├── ratchet/
 │   ├── __init__.py
 │   ├── double_ratchet.py    # алгоритм Double Ratchet
-│   ├──key_management.py   # Генерація та зберігання ключів│
-│
-├── interface/
-│   ├── __init__.py
-│   ├── client1.py           # Код для Клієнта 1
-│   ├── client2.py           # Код для Клієнта 2
-│
-├── test/
-│   ├── __init__.py
-│   ├── test1.py             # Тестування алгоритму
-│   ├── test2.py             # Поточний скрипт тестування
+│   ├──key_management.py     # Генерація та зберігання ключів
 │
 ├── requirements.txt         # Список залежностей
 └── README.md                # Інструкції
