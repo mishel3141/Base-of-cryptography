@@ -1,6 +1,0 @@
-2024-12-17 15:29:47,590 - INFO - Отримано: {'status': 'key_agreed', 'peer_key': 'W0VCVNAgL0zDFU/wTXEqx3R1qbAUCwgMw8KL5ZFlSFk='}
-2024-12-17 15:29:47,593 - INFO - Отримано: {'status': 'key_agreed', 'peer_key': '1NEk6NrjcR1Ih9mHrg1sY10j/njJ9nPNCHYTq9SIwmE='}
-2024-12-17 15:29:55,090 - INFO - Отримано: {'ciphertext': 'gq+IvZFB9sEZynWxLQr0L7NRArw=', 'nonce': 'uFLKwWsODyvWxY2E', 'sender': 'Client-1305727694704'}
-2024-12-17 15:29:58,482 - INFO - Отримано: {'ciphertext': '1yAos/JSx9rHPpH/E3D2ZoA=', 'nonce': 'Y309ZfbApJGvTrhI', 'sender': 'Client-1305727694704'}
-2024-12-17 15:30:05,757 - INFO - Отримано: {'ciphertext': '7ElVZ0IZNVePaDlwsHz5sFkTgrM=', 'nonce': 'PC12i2tyT7XE4FWK', 'sender': 'Client-1887028082544'}
-2024-12-17 15:30:09,837 - INFO - Отримано: {'ciphertext': 'bTnMdZpaRFFEQjUuRY3oyH4=', 'nonce': '+SMuZ7a76DaVal3f', 'sender': 'Client-1887028082544'}
