@@ -1,0 +1,23 @@
+2024-12-17 17:56:02,442 - INFO - Отримано дані: {'dh_public': 'wU2k7pADzjU6igpE1LpU/rEnP5GC/H4qNKyQkokqLxE=', 'peer_name': 'Alice'}
+2024-12-17 17:56:02,444 - INFO - Отримано дані: {'dh_public': 'coFDm11hb5dJvj269gpGBSCVTHyVPqugJ0ROP6N8cmY=', 'peer_name': 'Bob'}
+2024-12-17 17:56:02,452 - INFO - Спільний ключ з Alice успішно узгоджено.
+2024-12-17 17:56:02,455 - INFO - Спільний ключ з Bob успішно узгоджено.
+2024-12-17 17:56:28,901 - INFO - Отримано дані: {'sender': 'Alice', 'message': {'ciphertext': 'g5bi3PtLMOUTgYDdQK/XYky68KYnefKvcMq4', 'nonce': '4li6WD9J4nPoz27V'}}
+2024-12-17 17:56:28,902 - INFO - Отримано повідомлення від Alice: Hellow Bob!
+2024-12-17 17:56:28,903 - INFO - Відправлено повідомлення для Bob: Hellow Bob!
+2024-12-17 17:56:54,146 - INFO - Отримано дані: {'sender': 'Bob', 'message': {'ciphertext': '7H9byVxSMZa8Y+EzvHFLYDxurWLhHv4dLzZTTTy63+q69DGt0KyvYnc=', 'nonce': 'DJh0PzADzndl7JnR'}}
+2024-12-17 17:56:54,146 - INFO - Отримано повідомлення від Bob: Привіт, Алісо!
+2024-12-17 17:56:54,148 - INFO - Відправлено повідомлення для Alice: Привіт, Алісо!
+2024-12-17 17:57:14,581 - INFO - Отримано дані: {'sender': 'Bob', 'message': {'ciphertext': 'C75pwOdXkHNTc3UpF6uAr45i2pzI3uEr7xAS9x8Z5i08', 'nonce': 'wm/qBnRYFNPnbxzX'}}
+2024-12-17 17:57:14,581 - INFO - Отримано повідомлення від Bob: Як ся маш?
+2024-12-17 17:57:14,582 - INFO - Відправлено повідомлення для Alice: Як ся маш?
+2024-12-17 17:58:25,835 - INFO - Отримано дані: {'sender': 'Alice', 'message': {'ciphertext': 'tF3X6HtGu/C2mhAotYDZthd1MczFXigBVL1d+6+OWc4=', 'nonce': 'Cat4GER5275Zh0h5'}}
+2024-12-17 17:58:25,835 - INFO - Отримано повідомлення від Alice: I'm OK! And you?
+2024-12-17 17:58:25,837 - INFO - Відправлено повідомлення для Bob: I'm OK! And you?
+2024-12-17 17:58:53,719 - INFO - Отримано дані: {'sender': 'Bob', 'message': {'ciphertext': '6/JB7EpOg/mJFYuv/6l/6axxh2fIV6KCaSwDNkGgCM/VQRkr+5w8vXB+1y02LMj9NdWla2HMOQ47lP0/BlHZZw==', 'nonce': 'ucGQvWckIqr1+2t1'}}
+2024-12-17 17:58:53,720 - INFO - Отримано повідомлення від Bob: Усе добре, б'ємо москалів :)
+2024-12-17 17:58:53,723 - INFO - Відправлено повідомлення для Alice: Усе добре, б'ємо москалів :)
+2024-12-17 17:59:03,185 - INFO - Клієнт завершив роботу.
+2024-12-17 17:59:03,185 - ERROR - Помилка при отриманні: [WinError 10053] Программа на вашем хост-компьютере разорвала установленное подключение
+2024-12-17 17:59:21,884 - INFO - Клієнт завершив роботу.
+2024-12-17 17:59:21,885 - ERROR - Помилка при отриманні: [WinError 10053] Программа на вашем хост-компьютере разорвала установленное подключение
